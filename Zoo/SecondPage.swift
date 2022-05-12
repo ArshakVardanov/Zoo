@@ -10,7 +10,7 @@ import UIKit
 class SecondPage: UIViewController {
     
     
-    var tableView: UITableView!
+    var stack: UIStackView!
     var amphibians, birds, fish, mammals, reptiles: AnimalsType!
     var animalsArray: [AnimalsType] = []
     
@@ -24,23 +24,14 @@ class SecondPage: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    @objc func getStarted(sender: UIButton){
+        initTableView()
+    }
 }
-extension SecondPage: UITableViewDataSource, UITableViewDelegate  {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
-        cell.textLabel?.text = animalsArray[indexPath.row].titleLabel.text
-          return cell
-    }
-    
+extension SecondPage {
     func initTableView() {
-        tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.dataSource = self
-        tableView.delegate = self
+        stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
     }
     func initAnimals() {
         amphibians = AnimalsType()
@@ -72,11 +63,11 @@ extension SecondPage: UITableViewDataSource, UITableViewDelegate  {
     }
     
     func constructHierarchy() {
-        view.addSubview(tableView)
-        tableView.addSubview(amphibians)
-        tableView.addSubview(birds)
-        tableView.addSubview(fish)
-        tableView.addSubview(mammals)
-        tableView.addSubview(reptiles)
+        view.addSubview(stack)
+        stack.addSubview(amphibians)
+        stack.addSubview(birds)
+        stack.addSubview(fish)
+        stack.addSubview(mammals)
+        stack.addSubview(reptiles)
     }
 }
