@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var animalsTableView: SecondPage!
+    var navBar: UINavigationController!
     var titleLabel: UILabel!
     var picker: UIPickerView!
     var button: UIButton!
@@ -21,10 +23,20 @@ class ViewController: UIViewController {
         initButton()
         constructHierarchy()
         activateConstraints()
+        button.addTarget(self, action: #selector(getStarted), for: .touchUpInside)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func getStarted(sender: UIButton){
+        initAnimalsTableView()
     }
 }
 extension ViewController {
+    func initAnimalsTableView() {
+        animalsTableView = SecondPage()
+        animalsTableView.viewDidLayoutSubviews()
+    }
+    
     func initLabel() {
         titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -81,7 +93,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView,
                     numberOfRowsInComponent component: Int) -> Int {
-        return 3
+        return pickerData.count
     }
     
 }
