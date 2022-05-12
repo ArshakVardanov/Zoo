@@ -16,6 +16,8 @@
 		FDD0A63A282AC3C200DA7FA3 /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A639282AC3C200DA7FA3 /* ZooTests.swift */; };
 		FDD0A644282AC3C200DA7FA3 /* ZooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A643282AC3C200DA7FA3 /* ZooUITests.swift */; };
 		FDD0A646282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A645282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift */; };
+		FDD0A659282CED4C00DA7FA3 /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A658282CED4C00DA7FA3 /* SecondPage.swift */; };
+		FDD0A65B282D0A6300DA7FA3 /* AnimalsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FDD0A63F282AC3C200DA7FA3 /* ZooUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD0A643282AC3C200DA7FA3 /* ZooUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooUITests.swift; sourceTree = "<group>"; };
 		FDD0A645282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FDD0A658282CED4C00DA7FA3 /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
+		FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				FDD0A622282AC3C100DA7FA3 /* AppDelegate.swift */,
 				FDD0A624282AC3C100DA7FA3 /* SceneDelegate.swift */,
 				FDD0A626282AC3C100DA7FA3 /* ViewController.swift */,
+				FDD0A658282CED4C00DA7FA3 /* SecondPage.swift */,
+				FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */,
 				FDD0A628282AC3C100DA7FA3 /* Main.storyboard */,
 				FDD0A62B282AC3C200DA7FA3 /* Assets.xcassets */,
 				FDD0A62D282AC3C200DA7FA3 /* LaunchScreen.storyboard */,
@@ -258,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDD0A659282CED4C00DA7FA3 /* SecondPage.swift in Sources */,
 				FDD0A627282AC3C100DA7FA3 /* ViewController.swift in Sources */,
 				FDD0A623282AC3C100DA7FA3 /* AppDelegate.swift in Sources */,
 				FDD0A625282AC3C100DA7FA3 /* SceneDelegate.swift in Sources */,
+				FDD0A65B282D0A6300DA7FA3 /* AnimalsType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
