@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    var animalsTableView: SecondPage!
+class OnBoardingViewController: UIViewController {
+    var animalsTableView: AnimalChoosingViewController!
     var navBar: UINavigationController!
     var titleLabel: UILabel!
     var picker: UIPickerView!
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .white
         initLabel()
         initPicker()
         initButton()
@@ -28,14 +28,12 @@ class ViewController: UIViewController {
     }
     
     @objc func getStarted(sender: UIButton){
-        initAnimalsTableView()
+        let viewController = AnimalChoosingViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+        
     }
 }
-extension ViewController {
-    func initAnimalsTableView() {
-        animalsTableView = SecondPage()
-        animalsTableView.viewDidLayoutSubviews()
-    }
+extension OnBoardingViewController {
     
     func initLabel() {
         titleLabel = UILabel()
@@ -79,7 +77,7 @@ extension ViewController {
     }
 }
 
-extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension OnBoardingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

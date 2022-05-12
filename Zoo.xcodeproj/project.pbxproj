@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		FDD0A623282AC3C100DA7FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A622282AC3C100DA7FA3 /* AppDelegate.swift */; };
 		FDD0A625282AC3C100DA7FA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A624282AC3C100DA7FA3 /* SceneDelegate.swift */; };
-		FDD0A627282AC3C100DA7FA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A626282AC3C100DA7FA3 /* ViewController.swift */; };
-		FDD0A62A282AC3C100DA7FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD0A628282AC3C100DA7FA3 /* Main.storyboard */; };
+		FDD0A627282AC3C100DA7FA3 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A626282AC3C100DA7FA3 /* OnBoardingViewController.swift */; };
 		FDD0A62C282AC3C200DA7FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD0A62B282AC3C200DA7FA3 /* Assets.xcassets */; };
 		FDD0A62F282AC3C200DA7FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD0A62D282AC3C200DA7FA3 /* LaunchScreen.storyboard */; };
 		FDD0A63A282AC3C200DA7FA3 /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A639282AC3C200DA7FA3 /* ZooTests.swift */; };
 		FDD0A644282AC3C200DA7FA3 /* ZooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A643282AC3C200DA7FA3 /* ZooUITests.swift */; };
 		FDD0A646282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A645282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift */; };
-		FDD0A659282CED4C00DA7FA3 /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A658282CED4C00DA7FA3 /* SecondPage.swift */; };
+		FDD0A659282CED4C00DA7FA3 /* AnimalChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A658282CED4C00DA7FA3 /* AnimalChoosingViewController.swift */; };
 		FDD0A65B282D0A6300DA7FA3 /* AnimalsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +40,7 @@
 		FDD0A61F282AC3C100DA7FA3 /* Zoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD0A622282AC3C100DA7FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD0A624282AC3C100DA7FA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDD0A626282AC3C100DA7FA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FDD0A629282AC3C100DA7FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDD0A626282AC3C100DA7FA3 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		FDD0A62B282AC3C200DA7FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDD0A62E282AC3C200DA7FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDD0A630282AC3C200DA7FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,7 +49,7 @@
 		FDD0A63F282AC3C200DA7FA3 /* ZooUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD0A643282AC3C200DA7FA3 /* ZooUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooUITests.swift; sourceTree = "<group>"; };
 		FDD0A645282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FDD0A658282CED4C00DA7FA3 /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
+		FDD0A658282CED4C00DA7FA3 /* AnimalChoosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalChoosingViewController.swift; sourceTree = "<group>"; };
 		FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,10 +103,9 @@
 			children = (
 				FDD0A622282AC3C100DA7FA3 /* AppDelegate.swift */,
 				FDD0A624282AC3C100DA7FA3 /* SceneDelegate.swift */,
-				FDD0A626282AC3C100DA7FA3 /* ViewController.swift */,
-				FDD0A658282CED4C00DA7FA3 /* SecondPage.swift */,
+				FDD0A626282AC3C100DA7FA3 /* OnBoardingViewController.swift */,
+				FDD0A658282CED4C00DA7FA3 /* AnimalChoosingViewController.swift */,
 				FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */,
-				FDD0A628282AC3C100DA7FA3 /* Main.storyboard */,
 				FDD0A62B282AC3C200DA7FA3 /* Assets.xcassets */,
 				FDD0A62D282AC3C200DA7FA3 /* LaunchScreen.storyboard */,
 				FDD0A630282AC3C200DA7FA3 /* Info.plist */,
@@ -239,7 +236,6 @@
 			files = (
 				FDD0A62F282AC3C200DA7FA3 /* LaunchScreen.storyboard in Resources */,
 				FDD0A62C282AC3C200DA7FA3 /* Assets.xcassets in Resources */,
-				FDD0A62A282AC3C100DA7FA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,8 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD0A659282CED4C00DA7FA3 /* SecondPage.swift in Sources */,
-				FDD0A627282AC3C100DA7FA3 /* ViewController.swift in Sources */,
+				FDD0A659282CED4C00DA7FA3 /* AnimalChoosingViewController.swift in Sources */,
+				FDD0A627282AC3C100DA7FA3 /* OnBoardingViewController.swift in Sources */,
 				FDD0A623282AC3C100DA7FA3 /* AppDelegate.swift in Sources */,
 				FDD0A625282AC3C100DA7FA3 /* SceneDelegate.swift in Sources */,
 				FDD0A65B282D0A6300DA7FA3 /* AnimalsType.swift in Sources */,
@@ -305,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FDD0A628282AC3C100DA7FA3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FDD0A629282AC3C100DA7FA3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FDD0A62D282AC3C200DA7FA3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -449,7 +437,6 @@
 				INFOPLIST_FILE = Zoo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,7 +463,6 @@
 				INFOPLIST_FILE = Zoo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

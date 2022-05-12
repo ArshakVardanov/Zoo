@@ -15,14 +15,27 @@ class AnimalsType: UIView {
     init() {
         super.init(frame: .zero)
         
+//        self.backgroundColor = .
         initImageView()
         initButton()
         initLabel()
         constructHierarchy()
         activateConstraints()
+        button.addTarget(self, action: #selector(buttonPresed), for: .touchUpInside)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func buttonPresed(sender: UIButton){
+        if button.tag == 1{
+            sender.transform = CGAffineTransform(scaleX: 0.99, y: 0.99)
+            button.tag = 0
+        } else {
+            sender.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            button.tag = 1
+
+        }
     }
 }
 extension AnimalsType {
@@ -37,26 +50,30 @@ extension AnimalsType {
         titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textAlignment = .center
-        titleLabel.font = .systemFont(ofSize: 25)
+        titleLabel.textColor = .systemGreen
+        titleLabel.font = .systemFont(ofSize: 35)
     }
     func initButton() {
         button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.tag = 1
     }
     func constructHierarchy() {
-        addSubview(imageView)
-        imageView.addSubview(button)
+        addSubview(button)
+        button.addSubview(imageView)
         button.addSubview(titleLabel)
     }
     func activateConstraints() {
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: self.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            button.topAnchor.constraint(equalTo: self.topAnchor),
+            button.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            button.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            button.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            button.centerXAnchor.constraint(equalTo: imageView.centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
+            imageView.topAnchor.constraint(equalTo: button.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: button.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: button.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: button.bottomAnchor),
             
             titleLabel.centerXAnchor.constraint(equalTo: button.centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: button.centerYAnchor)
