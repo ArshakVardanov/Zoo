@@ -54,6 +54,22 @@ class AnimalChoosingViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func initAnimals() {
+        for item in animalsData {
+            let animal = AnimalsType()
+            animal.translatesAutoresizingMaskIntoConstraints = false
+            animal.set(value: item)
+            animal.button.addTarget(self, action: #selector(buttonPresed), for: .touchUpInside)
+            stack.addArrangedSubview(animal)
+            
+            NSLayoutConstraint.activate([
+                animal.widthAnchor.constraint(equalToConstant: view.frame.width),
+                animal.heightAnchor.constraint(equalToConstant: (view.frame.height)/4)
+            ])
+
+        }
+    }
+    
     @objc func buttonPresed(sender: UIButton){
         sender.transform = CGAffineTransform(scaleX: 0.99, y: 0.99)
         let viewController = AnimalsTableView()
@@ -72,29 +88,14 @@ extension AnimalChoosingViewController {
     func initScrol() {
         scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.showsVerticalScrollIndicator = true
     }
-    func initAnimals() {
-        for item in animalsData {
-            let animal = AnimalsType()
-            animal.translatesAutoresizingMaskIntoConstraints = false
-            animal.set(value: item)
-            animal.button.addTarget(self, action: #selector(buttonPresed), for: .touchUpInside)
-            stack.addArrangedSubview(animal)
-            
-            NSLayoutConstraint.activate([
-                animal.widthAnchor.constraint(equalToConstant: view.frame.width),
-                animal.heightAnchor.constraint(equalToConstant: (view.frame.height)/4)
-            ])
-
-        }
-    }
+    
     func activate() {
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.heightAnchor.constraint(equalToConstant: 1000),
             
             stack.topAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.topAnchor),
             stack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
