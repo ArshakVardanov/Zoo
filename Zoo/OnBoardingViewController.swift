@@ -8,8 +8,6 @@
 import UIKit
 
 class OnBoardingViewController: UIViewController {
-    var animalsTableView: AnimalChoosingViewController!
-    var navBar: UINavigationController!
     var titleLabel: UILabel!
     var picker: UIPickerView!
     var button: UIButton!
@@ -55,6 +53,7 @@ extension OnBoardingViewController {
         button.setTitle("Get Started", for: .normal)
         button.backgroundColor = .systemGray
         button.layer.cornerRadius = 12
+        button.tag = 1
     }
     
     func constructHierarchy() {

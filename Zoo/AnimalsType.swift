@@ -7,38 +7,42 @@
 
 import UIKit
 
+struct AnimalsData {
+    var name: String
+    var image: String
+    var id: String
+}
+
 class AnimalsType: UIView {
     var imageView: UIImageView!
     var titleLabel: UILabel!
     var button: UIButton!
+    var id: String!
+    
     
     init() {
         super.init(frame: .zero)
         
-//        self.backgroundColor = .
         initImageView()
         initButton()
         initLabel()
         constructHierarchy()
         activateConstraints()
-        button.addTarget(self, action: #selector(buttonPresed), for: .touchUpInside)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     @objc func buttonPresed(sender: UIButton){
-        if button.tag == 1{
-            sender.transform = CGAffineTransform(scaleX: 0.99, y: 0.99)
-            button.tag = 0
-        } else {
-            sender.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            button.tag = 1
-
-        }
+        if let iD = id {print(iD)}
     }
 }
 extension AnimalsType {
+    func set(value: AnimalsData) {
+        titleLabel.text = value.name
+        imageView.image = UIImage(named: value.image)
+        id = value.id
+    }
     func initImageView() {
         imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -50,13 +54,13 @@ extension AnimalsType {
         titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textAlignment = .center
-        titleLabel.textColor = .systemGreen
+        titleLabel.textColor = .black
         titleLabel.font = .systemFont(ofSize: 35)
     }
     func initButton() {
         button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.tag = 1
+        button.addTarget(self, action: #selector(buttonPresed), for: .touchUpInside)
     }
     func constructHierarchy() {
         addSubview(button)

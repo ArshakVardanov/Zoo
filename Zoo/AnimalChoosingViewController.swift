@@ -9,13 +9,41 @@ import UIKit
 
 class AnimalChoosingViewController: UIViewController {
     
-    
     var stack: UIStackView!
-    var amphibians, birds, fish, mammals, reptiles: AnimalsType!
+    var scrollView: UIScrollView!
+    
+    var animalsData: [AnimalsData] = [
+        AnimalsData.init(
+            name: "amphibians",
+            image: "amphibians",
+            id: "01"
+        ),
+        AnimalsData.init(
+            name: "birds",
+            image: "birds",
+            id: "02"
+        ),
+        AnimalsData.init(
+            name: "fish",
+            image: "fish",
+            id: "03"
+        ),
+        AnimalsData.init(
+            name: "mammals",
+            image: "mammals",
+            id: "04"
+        ),
+        AnimalsData.init(
+            name: "reptiles",
+            image: "reptiles",
+            id: "05"
+        )
+    ]
     
     init() {
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = .white
+        initScrol()
         initStackView()
         initAnimals()
         constructHierarchy()
@@ -25,75 +53,57 @@ class AnimalChoosingViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @objc func buttonPresed(sender: UIButton){
+        sender.transform = CGAffineTransform(scaleX: 0.99, y: 0.99)
+        let viewController = AnimalsTableView()
+        navigationController?.pushViewController(viewController, animated: true)
+        
+    }
 }
 extension AnimalChoosingViewController {
     func initStackView() {
         stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.spacing = 10
+        stack.spacing = 20
         stack.axis = .vertical
         stack.backgroundColor = .systemGray
     }
+    func initScrol() {
+        scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.showsVerticalScrollIndicator = true
+    }
     func initAnimals() {
-        amphibians = AnimalsType()
-        amphibians.translatesAutoresizingMaskIntoConstraints = false
-        amphibians.imageView.image = UIImage(named: "amphibians")
-        amphibians.titleLabel.text = "Amphibians"
-        
-        birds = AnimalsType()
-        birds.translatesAutoresizingMaskIntoConstraints = false
-        birds.imageView.image = UIImage(named: "birds")
-        birds.titleLabel.text = "Birds"
-        
-        fish = AnimalsType()
-        fish.translatesAutoresizingMaskIntoConstraints = false
-        fish.imageView.image = UIImage(named: "fish")
-        fish.titleLabel.text = "Fish"
-        
-        mammals = AnimalsType()
-        mammals.translatesAutoresizingMaskIntoConstraints = false
-        mammals.imageView.image = UIImage(named: "mammals")
-        mammals.titleLabel.text = "Mammals"
-        
-        reptiles = AnimalsType()
-        reptiles.translatesAutoresizingMaskIntoConstraints = false
-        reptiles.imageView.image = UIImage(named: "reptiles")
-        reptiles.titleLabel.text = "Reptiles"
-        
-        
+        for item in animalsData {
+            let animal = AnimalsType()
+            animal.translatesAutoresizingMaskIntoConstraints = false
+            animal.set(value: item)
+            animal.button.addTarget(self, action: #selector(buttonPresed), for: .touchUpInside)
+            stack.addArrangedSubview(animal)
+            
+            NSLayoutConstraint.activate([
+                animal.widthAnchor.constraint(equalToConstant: view.frame.width),
+                animal.heightAnchor.constraint(equalToConstant: (view.frame.height)/4)
+            ])
+
+        }
     }
     func activate() {
         NSLayoutConstraint.activate([
-            stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            stack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            stack.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            stack.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            amphibians.topAnchor.constraint(equalTo: stack.topAnchor, constant: 10),
-            amphibians.widthAnchor.constraint(equalToConstant: 200),
-            amphibians.heightAnchor.constraint(equalToConstant: 100),
-            
-            birds.widthAnchor.constraint(equalToConstant: 200),
-            birds.heightAnchor.constraint(equalToConstant: 100),
-            
-            fish.widthAnchor.constraint(equalToConstant: 200),
-            fish.heightAnchor.constraint(equalToConstant: 100),
-            
-            mammals.widthAnchor.constraint(equalToConstant: 200),
-            mammals.heightAnchor.constraint(equalToConstant: 100),
-            
-            reptiles.widthAnchor.constraint(equalToConstant: 200),
-            reptiles.heightAnchor.constraint(equalToConstant: 100),
-            
+            stack.topAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.topAnchor),
+            stack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            stack.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
         ])
     }
     
     func constructHierarchy() {
-        view.addSubview(stack)
-        stack.addArrangedSubview(amphibians)
-        stack.addArrangedSubview(birds)
-        stack.addArrangedSubview(fish)
-        stack.addArrangedSubview(mammals)
-        stack.addArrangedSubview(reptiles)
+        view.addSubview(scrollView)
+        scrollView.addSubview(stack)
     }
 }

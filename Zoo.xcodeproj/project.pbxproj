@@ -17,6 +17,7 @@
 		FDD0A646282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A645282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift */; };
 		FDD0A659282CED4C00DA7FA3 /* AnimalChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A658282CED4C00DA7FA3 /* AnimalChoosingViewController.swift */; };
 		FDD0A65B282D0A6300DA7FA3 /* AnimalsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */; };
+		FDD0A65D282EB3C100DA7FA3 /* AnimalsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A65C282EB3C100DA7FA3 /* AnimalsTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FDD0A645282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FDD0A658282CED4C00DA7FA3 /* AnimalChoosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalChoosingViewController.swift; sourceTree = "<group>"; };
 		FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsType.swift; sourceTree = "<group>"; };
+		FDD0A65C282EB3C100DA7FA3 /* AnimalsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		FDD0A616282AC3C100DA7FA3 = {
 			isa = PBXGroup;
 			children = (
+				FDD0A65C282EB3C100DA7FA3 /* AnimalsTableView.swift */,
 				FDD0A621282AC3C100DA7FA3 /* Zoo */,
 				FDD0A638282AC3C200DA7FA3 /* ZooTests */,
 				FDD0A642282AC3C200DA7FA3 /* ZooUITests */,
@@ -265,6 +268,7 @@
 				FDD0A623282AC3C100DA7FA3 /* AppDelegate.swift in Sources */,
 				FDD0A625282AC3C100DA7FA3 /* SceneDelegate.swift in Sources */,
 				FDD0A65B282D0A6300DA7FA3 /* AnimalsType.swift in Sources */,
+				FDD0A65D282EB3C100DA7FA3 /* AnimalsTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
