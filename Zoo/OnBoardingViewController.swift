@@ -11,7 +11,7 @@ class OnBoardingViewController: UIViewController {
     var titleLabel: UILabel!
     var picker: UIPickerView!
     var button: UIButton!
-    var pickerData = ["Armenian", "Russion", "English"]
+    var pickerData = ["English", "Russion", "Armenian"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,9 @@ class OnBoardingViewController: UIViewController {
     @objc func getStarted(sender: UIButton){
         let viewController = AnimalChoosingViewController()
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc func pickerTarget(sender: UIButton){
         
     }
 }
@@ -36,9 +39,10 @@ extension OnBoardingViewController {
     func initLabel() {
         titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "Welcome Zoo"
-        titleLabel.font = .systemFont(ofSize: 20)
+        titleLabel.text = NSLocalizedString("Welcome Zoo", comment: "")
+        titleLabel.font = .systemFont(ofSize: 28)
     }
+    
     
     func initPicker() {
         picker = UIPickerView()
@@ -50,7 +54,7 @@ extension OnBoardingViewController {
     func initButton() {
         button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Get Started", for: .normal)
+        button.setTitle(NSLocalizedString("Get Started", comment: ""), for: .normal)
         button.backgroundColor = .systemGray
         button.layer.cornerRadius = 12
         button.tag = 1

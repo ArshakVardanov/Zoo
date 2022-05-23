@@ -10,69 +10,59 @@ import UIKit
 class AnimalChoosingViewController: UIViewController {
     
     var stack: UIStackView!
-    var scrollView: UIScrollView!
-    
-    var animalsData: [AnimalsData] = [
-        AnimalsData.init(
-            name: "amphibians",
-            image: "amphibians",
-            id: "01"
-        ),
-        AnimalsData.init(
-            name: "birds",
-            image: "birds",
-            id: "02"
-        ),
-        AnimalsData.init(
-            name: "fish",
-            image: "fish",
-            id: "03"
-        ),
-        AnimalsData.init(
-            name: "mammals",
-            image: "mammals",
-            id: "04"
-        ),
-        AnimalsData.init(
-            name: "reptiles",
-            image: "reptiles",
-            id: "05"
-        )
+    var animalsTypeData: [AnimalsTypeData] = [
+        AnimalsTypeData.init(name: "Amphibians", image: "amphibians", id: 1),
+        AnimalsTypeData.init(name: "Birds", image: "birds", id: 2),
+        AnimalsTypeData.init(name: "Fish", image: "fish", id: 3),
+        AnimalsTypeData.init(name: "Mammals", image: "mammals", id: 4),
+        AnimalsTypeData.init(name: "Reptiles", image: "reptiles", id: 5)
     ]
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         view.backgroundColor = .white
-        initScrol()
+        view.backgroundColor = .white
         initStackView()
         initAnimals()
         constructHierarchy()
-        activate()
+        activateConstraint()
+        // Do any additional setup after loading the view.
+        
+        title = NSLocalizedString("animalType_title", comment: "")
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "gear"),
+            style: .plain,
+            target: self,
+            action: #selector(gearButtonPressed))
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    @objc func gearButtonPressed() {
+        UIApplication.shared.open(URL(string:
+                                        UIApplication.openSettingsURLString)!)
     }
     
     func initAnimals() {
-        for item in animalsData {
+        for item in animalsTypeData {
             let animal = AnimalsType()
             animal.translatesAutoresizingMaskIntoConstraints = false
             animal.set(value: item)
+            animal.imageView.clipsToBounds = true
+            animal.imageView.contentMode = .scaleAspectFill
+            animal.button.tag = item.id
             animal.button.addTarget(self, action: #selector(buttonPresed), for: .touchUpInside)
             stack.addArrangedSubview(animal)
-            
             NSLayoutConstraint.activate([
-                animal.widthAnchor.constraint(equalToConstant: view.frame.width),
-                animal.heightAnchor.constraint(equalToConstant: (view.frame.height)/4)
+                animal.imageView.widthAnchor.constraint(equalToConstant: (view.frame.width)),
+                animal.imageView.heightAnchor.constraint(equalToConstant: (view.frame.height)/7)
             ])
 
         }
     }
     
     @objc func buttonPresed(sender: UIButton){
-        sender.transform = CGAffineTransform(scaleX: 0.99, y: 0.99)
-        let viewController = AnimalsTableView()
+        let viewController = AnimalsTableView(animalTypeID: sender.tag)
+        
         navigationController?.pushViewController(viewController, animated: true)
         
     }
@@ -81,30 +71,21 @@ extension AnimalChoosingViewController {
     func initStackView() {
         stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.spacing = 20
+        stack.spacing = 5
         stack.axis = .vertical
-        stack.backgroundColor = .systemGray
+        stack.distribution = .fillEqually
+        stack.backgroundColor = .systemCyan
     }
-    func initScrol() {
-        scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    func activate() {
+        
+    func activateConstraint() {
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            scrollView.heightAnchor.constraint(equalToConstant: 1000),
-            
-            stack.topAnchor.constraint(equalTo: scrollView.safeAreaLayoutGuide.topAnchor),
-            stack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            stack.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            stack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stack.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     }
     
     func constructHierarchy() {
-        view.addSubview(scrollView)
-        scrollView.addSubview(stack)
+        view.addSubview(stack)
     }
 }

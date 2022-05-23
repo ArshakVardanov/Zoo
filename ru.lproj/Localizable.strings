@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  Zoo
+
+  Created by Arshak Vardanov on 19.05.22.
+  
+*/
+"Welcome Zoo" = "Добро пожаловать в зоопарк";
+"Get Started" = "Начать";
+
+"animalType_title" = "Животни";
+
+"Amphibians" = "Земноводные";
+"Salamander" = "Саламандра";
+"Frogs" = "Лягушки";
+"Axolotl" = "Аксолотль";
+
+"Birds" = "Птицы";
+"Owl" = "Сова";
+"Parrots" = "Попугаи";
+"Toucan" = "Тукан";
+
+"Fish" = "Рыбы";
+"Puffer" = "Пуффер";
+"Catfish" = "Сом";
+"Clownfish" = "Рыба-клоун";
+
+"Mammals" = "Млекопитающие";
+"Lion" = "Лев";
+"Wolf" = "Волк";
+"Bear" = "Медведь";
+
+"Reptiles" = "Рептилии";
+"Crocodiles" = "Крокодилы";
+"Iguanas" = "Игуаны";
+"Alligators" = "Аллигаторы";

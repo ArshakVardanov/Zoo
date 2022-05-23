@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  Zoo
+
+  Created by Arshak Vardanov on 19.05.22.
+  
+*/
+"Welcome Zoo" = "Բարի գալուստ գազանանոց";
+"Get Started" = "Սկսել";
+
+"animalType_title" = "Կենդանիներ";
+"Amphibians" = "Երկկենցաղներ";
+"Salamander" = "Սալամանդր";
+"Frogs" = "Գորտեր";
+"Axolotl" = "Աքսոլոտլ";
+
+"Birds" = "Թռչուններ";
+"Owl" = "Բու";
+"Parrots" = "Թութակներ";
+"Toucan" = "Տուկան";
+
+"Fish" = "Ձուկ";
+"Puffer" = "Ֆուգու";
+"Catfish" = "Կատու ձուկ";
+"Clownfish" = "Ծաղրածու ձուկ";
+
+"Mammals" = "Կաթնասուններ";
+"Lion" = "Առյուծ";
+"Wolf" = "Գայլ";
+"Bear" = "Արջ";
+
+"Reptiles" = "Սողուններ";
+"Crocodiles" = "Կոկորդիլոսներ";
+"Iguanas" = "Իգուանաներ";
+"Alligators" = "Ալիգատորներ";
+
+
+

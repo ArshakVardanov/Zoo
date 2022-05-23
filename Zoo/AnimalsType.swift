@@ -7,17 +7,17 @@
 
 import UIKit
 
-struct AnimalsData {
+struct AnimalsTypeData {
     var name: String
     var image: String
-    var id: String
+    var id: Int
 }
 
 class AnimalsType: UIView {
     var imageView: UIImageView!
     var titleLabel: UILabel!
     var button: UIButton!
-    var id: String!
+    var id: Int!
     
     
     init() {
@@ -38,15 +38,15 @@ class AnimalsType: UIView {
     }
 }
 extension AnimalsType {
-    func set(value: AnimalsData) {
-        titleLabel.text = value.name
+    func set(value: AnimalsTypeData) {
+        titleLabel.text = NSLocalizedString(value.name, comment: "")
         imageView.image = UIImage(named: value.image)
         id = value.id
     }
     func initImageView() {
         imageView = UIImageView()
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 12
+//        imageView.layer.cornerRadius = 12
         imageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -55,7 +55,7 @@ extension AnimalsType {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textAlignment = .center
         titleLabel.textColor = .black
-        titleLabel.font = .systemFont(ofSize: 35)
+        titleLabel.font = .systemFont(ofSize: 20)
     }
     func initButton() {
         button = UIButton()
@@ -64,23 +64,25 @@ extension AnimalsType {
     }
     func constructHierarchy() {
         addSubview(button)
-        button.addSubview(imageView)
         button.addSubview(titleLabel)
+        button.addSubview(imageView)
     }
     func activateConstraints() {
         NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: self.topAnchor),
-            button.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            button.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            button.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            button.topAnchor.constraint(equalTo: topAnchor),
+            button.leadingAnchor.constraint(equalTo: leadingAnchor),
+            button.trailingAnchor.constraint(equalTo: trailingAnchor),
+            button.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            imageView.topAnchor.constraint(equalTo: button.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: button.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: button.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: button.bottomAnchor),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            titleLabel.centerXAnchor.constraint(equalTo: button.centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: button.centerYAnchor)
+            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
     }
 }

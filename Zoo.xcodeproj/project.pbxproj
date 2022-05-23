@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2FFEE428390A9F00163DDC /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FFEE328390A9F00163DDC /* AnimalCell.swift */; };
+		FD2FFEE6283AFE8100163DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2FFEE5283AFE8100163DDC /* Assets.xcassets */; };
+		FD9456842836B320008213E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD9456862836B320008213E0 /* Localizable.strings */; };
 		FDD0A623282AC3C100DA7FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A622282AC3C100DA7FA3 /* AppDelegate.swift */; };
 		FDD0A625282AC3C100DA7FA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A624282AC3C100DA7FA3 /* SceneDelegate.swift */; };
 		FDD0A627282AC3C100DA7FA3 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A626282AC3C100DA7FA3 /* OnBoardingViewController.swift */; };
-		FDD0A62C282AC3C200DA7FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD0A62B282AC3C200DA7FA3 /* Assets.xcassets */; };
-		FDD0A62F282AC3C200DA7FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD0A62D282AC3C200DA7FA3 /* LaunchScreen.storyboard */; };
 		FDD0A63A282AC3C200DA7FA3 /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A639282AC3C200DA7FA3 /* ZooTests.swift */; };
 		FDD0A644282AC3C200DA7FA3 /* ZooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A643282AC3C200DA7FA3 /* ZooUITests.swift */; };
 		FDD0A646282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A645282AC3C200DA7FA3 /* ZooUITestsLaunchTests.swift */; };
@@ -38,12 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD2FFEE328390A9F00163DDC /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		FD2FFEE5283AFE8100163DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Zoo/Assets.xcassets; sourceTree = "<group>"; };
+		FD2FFEE7283B0C2700163DDC /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FD9456852836B320008213E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FD94568B2836B43F008213E0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FDD0A61F282AC3C100DA7FA3 /* Zoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD0A622282AC3C100DA7FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD0A624282AC3C100DA7FA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FDD0A626282AC3C100DA7FA3 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		FDD0A62B282AC3C200DA7FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FDD0A62E282AC3C200DA7FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDD0A630282AC3C200DA7FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDD0A635282AC3C200DA7FA3 /* ZooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD0A639282AC3C200DA7FA3 /* ZooTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooTests.swift; sourceTree = "<group>"; };
@@ -83,6 +87,9 @@
 		FDD0A616282AC3C100DA7FA3 = {
 			isa = PBXGroup;
 			children = (
+				FD2FFEE5283AFE8100163DDC /* Assets.xcassets */,
+				FD2FFEE328390A9F00163DDC /* AnimalCell.swift */,
+				FD9456862836B320008213E0 /* Localizable.strings */,
 				FDD0A65C282EB3C100DA7FA3 /* AnimalsTableView.swift */,
 				FDD0A621282AC3C100DA7FA3 /* Zoo */,
 				FDD0A638282AC3C200DA7FA3 /* ZooTests */,
@@ -109,8 +116,6 @@
 				FDD0A626282AC3C100DA7FA3 /* OnBoardingViewController.swift */,
 				FDD0A658282CED4C00DA7FA3 /* AnimalChoosingViewController.swift */,
 				FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */,
-				FDD0A62B282AC3C200DA7FA3 /* Assets.xcassets */,
-				FDD0A62D282AC3C200DA7FA3 /* LaunchScreen.storyboard */,
 				FDD0A630282AC3C200DA7FA3 /* Info.plist */,
 			);
 			path = Zoo;
@@ -218,7 +223,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ru,
 				Base,
+				hy,
 			);
 			mainGroup = FDD0A616282AC3C100DA7FA3;
 			productRefGroup = FDD0A620282AC3C100DA7FA3 /* Products */;
@@ -237,8 +244,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD0A62F282AC3C200DA7FA3 /* LaunchScreen.storyboard in Resources */,
-				FDD0A62C282AC3C200DA7FA3 /* Assets.xcassets in Resources */,
+				FD2FFEE6283AFE8100163DDC /* Assets.xcassets in Resources */,
+				FD9456842836B320008213E0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +276,7 @@
 				FDD0A625282AC3C100DA7FA3 /* SceneDelegate.swift in Sources */,
 				FDD0A65B282D0A6300DA7FA3 /* AnimalsType.swift in Sources */,
 				FDD0A65D282EB3C100DA7FA3 /* AnimalsTableView.swift in Sources */,
+				FD2FFEE428390A9F00163DDC /* AnimalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,12 +313,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FDD0A62D282AC3C200DA7FA3 /* LaunchScreen.storyboard */ = {
+		FD9456862836B320008213E0 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FDD0A62E282AC3C200DA7FA3 /* Base */,
+				FD9456852836B320008213E0 /* en */,
+				FD94568B2836B43F008213E0 /* ru */,
+				FD2FFEE7283B0C2700163DDC /* hy */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -320,6 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -380,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
