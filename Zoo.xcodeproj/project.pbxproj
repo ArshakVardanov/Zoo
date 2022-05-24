@@ -92,8 +92,8 @@
 				FD2FFEE5283AFE8100163DDC /* Assets.xcassets */,
 				FD2FFEE328390A9F00163DDC /* AnimalCell.swift */,
 				FD2FFEE8283B2A0200163DDC /* AnimalInfoPage.swift */,
+				FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */,
 				FD9456862836B320008213E0 /* Localizable.strings */,
-				FDD0A65C282EB3C100DA7FA3 /* AnimalsTableView.swift */,
 				FDD0A621282AC3C100DA7FA3 /* Zoo */,
 				FDD0A638282AC3C200DA7FA3 /* ZooTests */,
 				FDD0A642282AC3C200DA7FA3 /* ZooUITests */,
@@ -116,9 +116,9 @@
 			children = (
 				FDD0A622282AC3C100DA7FA3 /* AppDelegate.swift */,
 				FDD0A624282AC3C100DA7FA3 /* SceneDelegate.swift */,
+				FDD0A65C282EB3C100DA7FA3 /* AnimalsTableView.swift */,
 				FDD0A626282AC3C100DA7FA3 /* OnBoardingViewController.swift */,
 				FDD0A658282CED4C00DA7FA3 /* AnimalChoosingViewController.swift */,
-				FDD0A65A282D0A6300DA7FA3 /* AnimalsType.swift */,
 				FDD0A630282AC3C200DA7FA3 /* Info.plist */,
 			);
 			path = Zoo;
