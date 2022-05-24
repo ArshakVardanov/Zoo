@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FD2FFEE428390A9F00163DDC /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FFEE328390A9F00163DDC /* AnimalCell.swift */; };
 		FD2FFEE6283AFE8100163DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2FFEE5283AFE8100163DDC /* Assets.xcassets */; };
+		FD2FFEE9283B2A0200163DDC /* AnimalInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2FFEE8283B2A0200163DDC /* AnimalInfoPage.swift */; };
 		FD9456842836B320008213E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD9456862836B320008213E0 /* Localizable.strings */; };
 		FDD0A623282AC3C100DA7FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A622282AC3C100DA7FA3 /* AppDelegate.swift */; };
 		FDD0A625282AC3C100DA7FA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0A624282AC3C100DA7FA3 /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 		FD2FFEE328390A9F00163DDC /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
 		FD2FFEE5283AFE8100163DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Zoo/Assets.xcassets; sourceTree = "<group>"; };
 		FD2FFEE7283B0C2700163DDC /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FD2FFEE8283B2A0200163DDC /* AnimalInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalInfoPage.swift; sourceTree = "<group>"; };
 		FD9456852836B320008213E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FD94568B2836B43F008213E0 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FDD0A61F282AC3C100DA7FA3 /* Zoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 			children = (
 				FD2FFEE5283AFE8100163DDC /* Assets.xcassets */,
 				FD2FFEE328390A9F00163DDC /* AnimalCell.swift */,
+				FD2FFEE8283B2A0200163DDC /* AnimalInfoPage.swift */,
 				FD9456862836B320008213E0 /* Localizable.strings */,
 				FDD0A65C282EB3C100DA7FA3 /* AnimalsTableView.swift */,
 				FDD0A621282AC3C100DA7FA3 /* Zoo */,
@@ -272,6 +275,7 @@
 			files = (
 				FDD0A659282CED4C00DA7FA3 /* AnimalChoosingViewController.swift in Sources */,
 				FDD0A627282AC3C100DA7FA3 /* OnBoardingViewController.swift in Sources */,
+				FD2FFEE9283B2A0200163DDC /* AnimalInfoPage.swift in Sources */,
 				FDD0A623282AC3C100DA7FA3 /* AppDelegate.swift in Sources */,
 				FDD0A625282AC3C100DA7FA3 /* SceneDelegate.swift in Sources */,
 				FDD0A65B282D0A6300DA7FA3 /* AnimalsType.swift in Sources */,
