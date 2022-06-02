@@ -4,7 +4,6 @@
 //
 //  Created by Arshak Vardanov on 13.05.22.
 //
-
 import UIKit
 
 class AnimalsTableView: UIViewController, UITableViewDelegate {
@@ -51,38 +50,31 @@ class AnimalsTableView: UIViewController, UITableViewDelegate {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    @objc func animalPresed(sender: UIButton){
-        let viewController = AnimalInfoPage()
-        viewController.set(value: tableViewData[sender.tag - 1])
-        navigationController?.pushViewController(viewController, animated: true)
-    }
 }
 
 extension AnimalsTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedTrail = tableViewData[indexPath.row]
-        
-        if let viewController = storyboard?.instantiateViewController(identifier: "TrailViewController") as? AnimalInfoPage {
-            viewController.set(value: selectedTrail)
-            navigationController?.pushViewController(viewController, animated: true)
-        }
+        let viewController = AnimalInfoViewController(data: selectedTrail)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableViewData.count
     }
 
-    func tableView(_ tableView: UITableView,
-                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = animalsTabelView.dequeueReusableCell(withIdentifier: "TableViewCell",
-                                                             for: indexPath) as! AnimalCell
-           // Fetch the data for the row.
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let cell = animalsTabelView.dequeueReusableCell(
+            withIdentifier: "TableViewCell",
+            for: indexPath
+        ) as! AnimalCell
         cell.data = tableViewData[indexPath.row]
-//        cell.animalButton.addTarget(self, action: #selector(animalPresed), for: .touchUpInside)
-           // Configure the cell’s contents with data from the fetched object.        
        return cell
     }
+    
     func initAnimalsTabel() {
         animalsTabelView = UITableView()
         animalsTabelView.translatesAutoresizingMaskIntoConstraints = false

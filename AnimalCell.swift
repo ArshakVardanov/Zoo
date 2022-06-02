@@ -15,13 +15,11 @@ struct AnimalsData {
 class AnimalCell: UITableViewCell {
     var image: UIImageView!
     var nameLabel: UILabel!
-    var animalButton: UIButton!
     var data: AnimalsData? {
         didSet {
             guard let data = data else { return }
             image.image = UIImage(named: data.imageName)
             nameLabel.text = NSLocalizedString(data.name, comment: "")
-            animalButton.tag = data.id
         }
     }
     
@@ -33,10 +31,8 @@ class AnimalCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
 extension AnimalCell {
     func commonInit() {
-        initButton()
         initImageView()
         initLabel()
         constructHierarchy()
@@ -59,25 +55,14 @@ extension AnimalCell {
         nameLabel.textColor = .black
         nameLabel.font = .systemFont(ofSize: 20)
     }
-    
-    func initButton() {
-        animalButton = UIButton()
-        animalButton.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
+        
     func constructHierarchy() {
-        addSubview(animalButton)
-        animalButton.addSubview(image)
-        animalButton.addSubview(nameLabel)
+        addSubview(image)
+        addSubview(nameLabel)
     }
     
     func activateConstraints() {
         NSLayoutConstraint.activate([
-            animalButton.topAnchor.constraint(equalTo: self.topAnchor),
-            animalButton.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            animalButton.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            animalButton.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            
             image.widthAnchor.constraint(equalToConstant: 100),
             image.heightAnchor.constraint(equalToConstant: 100),
             image.topAnchor.constraint(equalTo: topAnchor, constant: 10),

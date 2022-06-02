@@ -7,8 +7,21 @@
 
 import UIKit
 
-class AnimalChoosingViewController: UIViewController {
+protocol AnimalDataDelegate {
+//    var name: String {get set}
+//    var imageName: String {get set}
+//    var id: Int {get set}
     
+    func didButtonSelected(with data: AnimalsTypeData)
+}
+
+class AnimalChoosingViewController: UIViewController, AnimalDataDelegate {
+    func didButtonSelected(with data: AnimalsTypeData) {
+        let viewController = AnimalsTableView(animalTypeID: data.id)
+                    navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    var delegate: AnimalDataDelegate?
     var stack: UIStackView!
     var animalsTypeData: [AnimalsTypeData] = [
         AnimalsTypeData.init(name: "Amphibians", image: "amphibians", id: 1),
@@ -44,13 +57,10 @@ class AnimalChoosingViewController: UIViewController {
     
     func initAnimals() {
         for item in animalsTypeData {
-            let animal = AnimalsType()
+            let animal = AnimalsTypeView()
             animal.translatesAutoresizingMaskIntoConstraints = false
-            animal.set(value: item)
-            animal.imageView.clipsToBounds = true
-            animal.imageView.contentMode = .scaleAspectFill
-            animal.button.tag = item.id
-            animal.button.addTarget(self, action: #selector(buttonPresed), for: .touchUpInside)
+            animal.set(data: item)
+            animal.delegate = self
             stack.addArrangedSubview(animal)
             NSLayoutConstraint.activate([
                 animal.imageView.widthAnchor.constraint(equalToConstant: (view.frame.width)),
@@ -58,13 +68,6 @@ class AnimalChoosingViewController: UIViewController {
             ])
 
         }
-    }
-    
-    @objc func buttonPresed(sender: UIButton){
-        let viewController = AnimalsTableView(animalTypeID: sender.tag)
-        
-        navigationController?.pushViewController(viewController, animated: true)
-        
     }
 }
 extension AnimalChoosingViewController {

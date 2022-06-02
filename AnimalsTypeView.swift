@@ -1,5 +1,5 @@
 //
-//  AnimalsType.swift
+//  AnimalsTypeView.swift
 //  Zoo
 //
 //  Created by Arshak Vardanov on 12.05.22.
@@ -13,11 +13,13 @@ struct AnimalsTypeData {
     var id: Int
 }
 
-class AnimalsType: UIView {
+class AnimalsTypeView: UIView {
     var imageView: UIImageView!
     var titleLabel: UILabel!
     var button: UIButton!
     var id: Int!
+    var delegate: AnimalDataDelegate?
+    var data: AnimalsTypeData!
     
     
     init() {
@@ -32,21 +34,22 @@ class AnimalsType: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    func set(data: AnimalsTypeData) {
+        titleLabel.text = NSLocalizedString(data.name, comment: "")
+        imageView.image = UIImage(named: data.image)
+        id = data.id
+        self.data = data
+    }
     
     @objc func buttonPresed(sender: UIButton){
-        if let iD = id {print(iD)}
+        delegate?.didButtonSelected(with: data)
     }
 }
-extension AnimalsType {
-    func set(value: AnimalsTypeData) {
-        titleLabel.text = NSLocalizedString(value.name, comment: "")
-        imageView.image = UIImage(named: value.image)
-        id = value.id
-    }
+extension AnimalsTypeView {
     func initImageView() {
         imageView = UIImageView()
         imageView.clipsToBounds = true
-//        imageView.layer.cornerRadius = 12
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
