@@ -1,0 +1,36 @@
+/* 
+  Localizable.strings
+  Zoo
+
+  Created by Arshak Vardanov on 19.05.22.
+  
+*/
+"Welcome Zoo" = "Welcome Zoo";
+"Get Started" = "Get Started";
+
+"animalType_title" = "Animals";
+
+"Amphibians" = "Amphibians";
+"Salamander" = "Salamander";
+"Frogs" = "Frogs";
+"Axolotl" = "Axolotl";
+
+"Birds" = "Birds";
+"Owl" = "Owl";
+"Parrots" = "Parrots";
+"Toucan" = "Toucan";
+
+"Fish" = "Fish";
+"Puffer" = "Puffer";
+"Catfish" = "Catfish";
+"Clownfish" = "Clownfish";
+
+"Mammals" = "Mammals";
+"Lion" = "Lion";
+"Wolf" = "Wolf";
+"Bear" = "Bear";
+
+"Reptiles" = "Reptiles";
+"Crocodiles" = "Crocodiles";
+"Iguanas" = "Iguanas";
+"Alligators" = "Alligators";
